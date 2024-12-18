@@ -13,7 +13,7 @@ const FeaturedProducts = () => {
         <h2 className="text-3xl font-bold text-center mb-8">Featured Products</h2>
 
         {/* Product Categories */}
-        {["Shirts", "Pants", "T-shirts", "Night Suits", "Scrub Suits"].map(
+        {["Shirts", "Pants", "T-Shirts", "Night Suits", "Scrub Suits"].map( 
           (category) => (
             <div key={category} className="mb-12">
               {/* Category Title */}
@@ -29,8 +29,8 @@ const FeaturedProducts = () => {
                     {/* Product Image */}
                     <img
                       src={product.image}
-                      alt={product.name}
-                      className="h-48 w-auto object-contain"
+                      alt={product.title}  // Updated to use product.title
+                      className="h-48 w-auto object-cover"
                     />
 
                     {/* Product Name */}
@@ -46,7 +46,7 @@ const FeaturedProducts = () => {
 
         {/* Inquiry Button */}
         <div className="flex justify-center py-12">
-          <button className="text-gray-900 font-semibold py-5 px-6 border-2 border-[#4cb65e] rounded-md hover:bg-[#41a752] hover:text-white transition duration-300">
+          <button className="text-gray-900 font-semibold text-sm md:text-md py-2 px-4 md:py-5 md:px-6 border-2 border-[#4cb65e] rounded-md hover:bg-[#41a752] hover:text-white transition duration-300">
             SEND INQUIRY FOR BULK ORDERS
           </button>
         </div>
