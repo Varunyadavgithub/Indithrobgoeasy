@@ -8,6 +8,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  // Handle hover events for dropdown
+  const handleMouseEnter = () => setIsDropdownOpen(true);
+  const handleMouseLeave = () => setIsDropdownOpen(false);
+
+  // Handle click events for dropdown
   const toggleDropdown = () => {
     setIsDropdownOpen((prevState) => !prevState);
   };
@@ -24,11 +29,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="ml-5 flex items-center">
           <Link to="/">
-            <img
-              src={assets.logo}
-              alt="logo"
-              className="h-16 md:h-24 w-auto"
-            />
+            <img src={assets.logo} alt="logo" className="h-16 md:h-24 w-auto" />
           </Link>
         </div>
 
@@ -46,7 +47,7 @@ const Navbar = () => {
         <div
           className={`${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
-          } md:translate-x-0 fixed md:static top-0 right-0 h-full md:h-auto w-2/3 md:w-auto bg-green-800  md:bg-transparent shadow md:shadow-none px-4 md:px-0 transition-transform duration-300 z-40`}
+          } md:translate-x-0 fixed md:static top-0 right-0 h-full md:h-auto w-2/3 md:w-auto bg-green-800 md:bg-transparent shadow md:shadow-none px-4 md:px-0 transition-transform duration-300 z-40`}
         >
           <div className="flex flex-col md:flex-row items-center md:space-x-8 pt-20 md:pt-0">
             {/* Close Icon for Mobile Menu */}
@@ -79,7 +80,11 @@ const Navbar = () => {
                   About Us
                 </Link>
               </li>
-              <li className="relative">
+              <li
+                className="relative"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
                 <button
                   className="block font-medium text-xl py-2 md:py-0 hover:text-[#32346a] focus:outline-none"
                   onClick={toggleDropdown}
@@ -87,7 +92,7 @@ const Navbar = () => {
                   Products
                 </button>
                 {isDropdownOpen && (
-                  <ul className="absolute left-0 mt-2 bg-white shadow-md rounded-md w-40">
+                  <ul className="absolute left-0 bg-white shadow-lg shadow-black rounded-md w-40">
                     <li>
                       <Link
                         to="/products/shirts"
