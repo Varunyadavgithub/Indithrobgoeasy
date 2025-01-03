@@ -21,22 +21,17 @@ const Footer = () => {
                 </li>
                 <li className="mb-2">
                   <a href="#" className="hover:underline">
+                    Products
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="#" className="hover:underline">
                     Services
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="#" className="hover:underline">
-                    Blog
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a href="#" className="hover:underline">
                     Contact us
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a href="#" className="hover:underline">
-                    Our Presence
                   </a>
                 </li>
               </ul>
@@ -76,68 +71,59 @@ const Footer = () => {
               <ul>
                 <li className="mb-2">
                   <a href="#" className="hover:underline">
-                    HoneyComb All Season Polo Collar T-Shirts
+                    Shirts
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="#" className="hover:underline">
-                    Cotton Poly Blend Pique Polo Collar T-Shirts
+                    Pants
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="#" className="hover:underline">
-                    Spun Poly Pique Polo Collar T-Shirts
+                    T-Shirts
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="#" className="hover:underline">
-                    100% Cotton Pique Polo Collar Tshirt
+                    Night Suits
                   </a>
                 </li>
                 <li className="mb-2">
                   <a href="#" className="hover:underline">
-                    Sports Micro Polyester Round Neck
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a href="#" className="hover:underline">
-                    100% Cotton Single Jersey Round Neck T-Shirts
+                    Scrub Suits
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold mb-4">
-                Sunstar Apparels Private Limited
-              </h3>
+              <h3 className="font-bold mb-4">Indithrobgoeasy</h3>
               <div className="mb-4">
-                <div className="flex items-center mb-2">
+                {/* <div className="flex items-center mb-2">
                   <i className="fas fa-map-marker-alt mr-2"></i>
                   <span className="font-bold">Tamil Nadu</span>
-                </div>
-                <p>
-                  Netaji Apparel Park, NH544, EETTIVEERAMPALAYAM, New Tirupur,
-                  Tamil Nadu 641666
-                </p>
-              </div>
-              <div className="mb-4">
-                <div className="flex items-center mb-2">
-                  <i className="fas fa-map-marker-alt mr-2"></i>
-                  <span className="font-bold">Ahmedabad</span>
-                </div>
-                <p>201, SG Mall, Thaltej, Ahmedabad-380054, Gujarat India</p>
+                </div> */}
+                <p>Vadodara Gujarat India</p>
               </div>
               <div className="flex items-center">
                 <i className="fas fa-phone-alt mr-2"></i>
-                <span>Phone: +91 94281 18631 +91 88665 00260</span>
+                <span>Phone: +91 99243 33945</span>
               </div>
             </div>
           </div>
         </div>
+        {/* Footer Bottom Section */}
         <div className="bg-gray-800 text-white text-center py-4 mt-8">
           <p>
-            © Copyright 2024 | Website design & Developed by{" "}
-            <span className="text-yellow-500">Varun Yadav</span>
+            All Rights Reserved{" "}
+            <span className="font-bold">Indithrobgoeasy </span>Managed By{" "}
+            <a
+              href="https://www.taniyawebfix.com/"
+              target="_blank"
+              className="hover:cursor-pointer hover:underline text-blue-600"
+            >
+              TaniyaWebfix Pvt.Ltd
+            </a>
           </p>
         </div>
       </footer>

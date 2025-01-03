@@ -4,10 +4,9 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
 import Services from "./pages/Services";
-import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
-import Inquiry from "./pages/Inquiry";
 import Footer from "./components/Footer";
 import FloatingContactIcons from "./components/FloatingContactIcons";
 
@@ -19,10 +18,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/product-detail/:category/:id" element={<ProductDetail />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/inquiry" element={<Inquiry />} />
       </Routes>
       <FloatingContactIcons />
       <Footer />

@@ -1,6 +1,4 @@
-import logo from "./logo.png";
-import model1 from "./model1.jpg";
-import model2 from "./model2.jpg";
+import logo from "./logo2.png";
 import Hero_image from "./hero_image.jpg";
 import about_us from "./about_us.webp";
 
@@ -19,17 +17,17 @@ import tshirt_02 from "./product_Images/tshirt_02.webp";
 import tshirt_03 from "./product_Images/tshirt_03.jpg";
 import tshirt_04 from "./product_Images/tshirt_04.webp";
 
-import Night_Suits_01 from "./product_Images/Night_Suits_01.jpeg";
-import Night_Suits_02 from "./product_Images/Night_Suits_02.jpeg";
-import Night_Suits_03 from "./product_Images/Night_Suits_03.jpeg";
-import Night_Suits_04 from "./product_Images/Night_Suits_04.jpeg";
+import Night_Suits_01 from "./product_Images/Night_Suits_01.webp";
+import Night_Suits_02 from "./product_Images/Night_Suits_02.webp";
+import Night_Suits_03 from "./product_Images/Night_Suits_03.webp";
+import Night_Suits_04 from "./product_Images/Night_Suits_04.webp";
 
 import Scrub_Suits_01 from "./product_Images/Scrub_Suits_01.webp";
 import Scrub_Suits_02 from "./product_Images/Scrub_Suits_02.webp";
 import Scrub_Suits_03 from "./product_Images/Scrub_Suits_03.webp";
 import Scrub_Suits_04 from "./product_Images/Scrub_Suits_04.webp";
 
-export const assets = { logo, model1, model2, Hero_image, about_us };
+export const assets = { logo, Hero_image, about_us };
 
 export const products = [
   // Shirts
@@ -197,10 +195,10 @@ export const products = [
   // Night Suits
   {
     id: 13,
-    title: "Men's Cotton Night Suit",
+    title: "Women's Satin Nightwear Set",
     price: 20.0,
     description:
-      "Soft and comfortable nightwear set with a relaxed fit for a good night's sleep.",
+      "Elegant satin nightwear with a silky finish for ultimate comfort and style.",
     category: "Night Suits",
     image: Night_Suits_01,
     rating: {
@@ -210,10 +208,10 @@ export const products = [
   },
   {
     id: 14,
-    title: "Women's Satin Nightwear Set",
+    title: "Men's Cotton Night Suit",
     price: 35.0,
     description:
-      "Elegant satin nightwear with a silky finish for ultimate comfort and style.",
+      "Soft and comfortable nightwear set with a relaxed fit for a good night's sleep.",
     category: "Night Suits",
     image: Night_Suits_02,
     rating: {

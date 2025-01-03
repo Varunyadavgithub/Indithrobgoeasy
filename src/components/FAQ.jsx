@@ -7,97 +7,91 @@ const FAQ = () => {
       answer:
         "We manufacture a wide range of garments, including t-shirts, hoodies, sweatshirts, polo shirts, track pants, shorts, and more. We can also create custom-made garments according to your specific requirements.",
     },
-    {
-      question: "What is your minimum order quantity?",
-      answer:
-        "Our minimum order quantity depends on the product type. Please contact us for details.",
-    },
-    {
-      question: "What is your turnaround time for orders?",
-      answer:
-        "Turnaround time varies by order size and customization. Typically, it ranges between 2-4 weeks.",
-    },
-    {
-      question: "Can you create garments with our branding?",
-      answer:
-        "Yes, we offer branding options, including logos, labels, and custom designs.",
-    },
-    {
-      question: "What materials do you use for your garments?",
-      answer:
-        "We use high-quality fabrics, including cotton, polyester, and blends, based on your preferences.",
-    },
+    // ... other FAQs
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:px-12 lg:px-24">
-      {/* FAQ Section */}
-      <div className="p-6 w-full md:w-1/2">
-        <h2 className="text-3xl font-bold mb-6">FAQ’s</h2>
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div key={index} className="border rounded-md border-[#41a752]">
-              <button
-                className="flex justify-between items-center w-full p-4 text-left font-semibold text-black"
-                onClick={() => toggleAccordion(index)}
-              >
-                {faq.question}
-                <span
-                  className={`transition-transform ${activeIndex === index ? "rotate-180" : ""}`}
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-12">
+          {/* FAQ Section */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl font-bold mb-8 relative inline-block">
+              Frequently Asked Questions
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-[#41a752] transform origin-left"></div>
+            </h2>
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="border rounded-lg border-gray-200 shadow-sm"
                 >
-                  ▼
-                </span>
-              </button>
-              {activeIndex === index && (
-                <div className="p-4 text-gray-700">{faq.answer}</div>
-              )}
+                  <button
+                    className="flex justify-between items-center w-full p-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors duration-300"
+                    onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                  >
+                    <span>{faq.question}</span>
+                    <span
+                      className={`transform transition-transform duration-300 ${
+                        activeIndex === index ? "rotate-180" : ""
+                      }`}
+                    >
+                      ▼
+                    </span>
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      activeIndex === index ? "max-h-96" : "max-h-0"
+                    }`}
+                  >
+                    <div className="p-4 bg-gray-50 text-gray-600">
+                      {faq.answer}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      {/* Bulk Order Section */}
-      <div className="flex items-center justify-center w-full md:w-1/2 p-4">
-        <div className="bg-[#41a752] p-6 rounded-md text-white w-full max-w-sm md:max-w-md">
-          <h2 className="text-2xl font-bold mb-4">Bulk order now</h2>
-          <p className="mb-6">Unlock the Best Deal for you only.</p>
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Enter your name"
-              className="w-full p-2 rounded-md text-black"
-            />
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full p-2 rounded-md text-black"
-            />
-            <input
-              type="tel"
-              placeholder="Enter your phone"
-              className="w-full p-2 rounded-md text-black"
-            />
-            <textarea
-              placeholder="Enter your message"
-              className="w-full p-2 rounded-md text-black"
-              rows={4}
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-[#32346a] text-white w-full py-2 rounded-md font-bold hover:bg-[#32346a]"
-            >
-              ORDER NOW
-            </button>
-          </form>
+          {/* Bulk Order Form */}
+          <div className="w-full md:w-1/2">
+            <div className="bg-white p-8 rounded-lg shadow-xl">
+              <h2 className="text-2xl font-bold mb-6">Request a Quote</h2>
+              <form className="space-y-4">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#41a752]"
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#41a752]"
+                />
+                <input
+                  type="tel"
+                  placeholder="Your Phone"
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#41a752]"
+                />
+                <textarea
+                  placeholder="Your Message"
+                  rows={4}
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#41a752]"
+                ></textarea>
+                <button
+                  type="submit"
+                  className="w-full bg-[#41a752] text-white py-3 rounded-md font-semibold hover:bg-[#32346a] transition-colors duration-300 shadow-md hover:shadow-lg"
+                >
+                  Send Request
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
