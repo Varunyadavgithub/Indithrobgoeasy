@@ -7,7 +7,21 @@ const FAQ = () => {
       answer:
         "We manufacture a wide range of garments, including t-shirts, hoodies, sweatshirts, polo shirts, track pants, shorts, and more. We can also create custom-made garments according to your specific requirements.",
     },
-    // ... other FAQs
+    {
+      question: "Why focus on quality and on-time delivery?",
+      answer:
+        "We prioritize quality to ensure that our garments meet your expectations, providing durability and comfort. On-time delivery is crucial to maintain customer satisfaction and ensure that you receive your order when promised.",
+    },
+    {
+      question: "Why offer garments at highly affordable prices?",
+      answer:
+        "We believe that high-quality garments should be accessible to everyone. By offering competitive prices, we ensure that our products are affordable without compromising on quality or design.",
+    },
+    {
+      question: "Why choose garments that appeal visually?",
+      answer:
+        "We design our garments with aesthetics in mind, as we understand the importance of looking good while feeling comfortable. Our visually appealing designs are tailored to meet the style preferences of our customers.",
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
@@ -30,7 +44,9 @@ const FAQ = () => {
                 >
                   <button
                     className="flex justify-between items-center w-full p-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition-colors duration-300"
-                    onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                    onClick={() =>
+                      setActiveIndex(activeIndex === index ? null : index)
+                    }
                   >
                     <span>{faq.question}</span>
                     <span

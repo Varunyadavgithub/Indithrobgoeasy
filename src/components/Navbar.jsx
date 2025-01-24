@@ -107,7 +107,7 @@ const Navbar = () => {
                   Products
                 </button>
                 {isDesktopDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg overflow-hidden">
+                  <div className="absolute top-full left-0 w-56 bg-white shadow-lg rounded-lg overflow-hidden">
                     {productCategories.map((category, index) => (
                       <Link
                         key={index}
@@ -171,9 +171,9 @@ const Navbar = () => {
           <div className="p-3 rounded-full bg-[#4cb65e]">
             <IoMdCall size={24} className="text-white" />
           </div>
-          <div className="text-white">
+          <div className="text-white text-nowrap">
             <div className="text-sm font-semibold">CALL US NOW</div>
-            <div className="text-2xl font-bold">+91 99243 33945</div>
+            <div className="text-sm sm:text-xl md:2xl font-bold">+91 99243 33945</div>
           </div>
         </div>
       </div>

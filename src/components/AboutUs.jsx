@@ -33,22 +33,26 @@ const AboutUs = () => {
               </h2>
               <div className="bg-[#41a752] h-1 w-16 md:w-20"></div>
             </div>
-
             <h1 className="text-3xl md:text-5xl text-gray-800 font-bold">
               T-Shirt Manufacturer
             </h1>
-
             <div className="space-y-4">
               <p className="text-lg text-gray-600 leading-relaxed">
-                Established in 2005, we are on a mission to provide top-quality
-                t-shirts to our customers in India and globally. Our fully owned
-                SEDEX-approved facility is based in the garment hub of India,
-                Tirupur, Tamil Nadu.
+                Established in 2025, We are an upcoming apparel brand in India,
+                offering a comprehensive range of garments for both Men and
+                Women, from Knitwear, Activewear, Leisurewear, Woven etc,
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                At our factory, we use advanced garment-making machines from
-                Juki, Brother, and Siruba to produce t-shirts that meet the
-                highest standards of quality and durability.
+                We believe in providing garments that gives great feel and
+                comfort at the same time it looks trendy that goes with the
+                current market requirement of the wearer. We wish to be the
+                final destination for customer who wish to have comfortable and
+                that uplifts your confidence at an affordable price.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Our brand name IndiThrob is self-explanatory and reflects our
+                thinking, we would like to develop our brand in coming future
+                that becomes the heartbeat of the nation.
               </p>
             </div>
 
@@ -63,7 +67,6 @@ const AboutUs = () => {
                 </div>
               ))}
             </div>
-
             <button className="bg-transparent px-8 py-3 border-2 border-[#41a752] text-[#41a752] rounded-md hover:bg-[#41a752] hover:text-white transition-all duration-300 font-semibold shadow-md hover:shadow-lg">
               <Link to="/about">Read More</Link>
             </button>
